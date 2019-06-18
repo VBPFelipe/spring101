@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lista</title>
+</head>
+<body>
+	<header>
+		<br>
+		<div>
+			<a th:href="@{/custoemr/form}">Cadastrar</a>
+		</div>
+	</header>
+	<h2 th:text="${modelTxt}">  </h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Opções</th>
+			</tr>
+		</thead>
+		<tr th:each="customer : ${customers}">
+			<td th:text="${customer.name}"> Fulano </td>
+			<td> editar/remover </td>
+		</tr>
+	</table>
+		
+	<a th:href="@{/customer/form}">povoar</a>
+	
+</body>
+</html>

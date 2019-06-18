@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ocorrências Registradas</title>
+</head>
+<body>
+<h1>Ocorrências</h1>
+<h2 th:text="${textoModel}"></h2>
+<h3 th:each="ocorrencia : ${ocorrencias}" th:text="${ocorrencia.descricao}"></h3>
+
+</body>
+</html>
